@@ -15,7 +15,7 @@ use Space48\CustomerReviews\Model\Estimate;
 class Success extends Template
 {
 
-    const GSHOPPING_ACCOUNT_ID_CONFIG_PATH = 'space48_certified_shops/badge_settings/google_shopping_account_id';
+    const GSHOPPING_ACCOUNT_ID_CONFIG_PATH = 'space48_customer_reviews/badge_settings/google_shopping_account_id';
 
     /**
      * @var bool

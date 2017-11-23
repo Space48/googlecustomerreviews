@@ -12,13 +12,13 @@ use Magento\Store\Model\ScopeInterface;
 class Badge extends Template
 {
 
-    const TRUSTED_STORE_ID_CONFIG_PATH = 'space48_certified_shops/general/trusted_store_id';
-    const SHOPPING_ACCOUNT_ID_CONFIG_PATH = 'space48_certified_shops/badge_settings/google_shopping_account_id';
-    const LOCALE_CONFIG_PATH = 'space48_certified_shops/general/locale';
-    const SHOPPING_COUNTRY_CONFIG_PATH = 'space48_certified_shops/badge_settings/google_shopping_country';
-    const SHOPPING_LANGUAGE_CONFIG_PATH = 'space48_certified_shops/badge_settings/google_shopping_language';
-    const BADGE_POSITION_CONFIG_CONFIG_PATH = 'space48_certified_shops/badge_settings/badge_position';
-    const ENABLE_CONFIG_PATH = 'space48_certified_shops/general/enable';
+    const TRUSTED_STORE_ID_CONFIG_PATH = 'space48_customer_reviews/general/trusted_store_id';
+    const SHOPPING_ACCOUNT_ID_CONFIG_PATH = 'space48_customer_reviews/badge_settings/google_shopping_account_id';
+    const LOCALE_CONFIG_PATH = 'space48_customer_reviews/general/locale';
+    const SHOPPING_COUNTRY_CONFIG_PATH = 'space48_customer_reviews/badge_settings/google_shopping_country';
+    const SHOPPING_LANGUAGE_CONFIG_PATH = 'space48_customer_reviews/badge_settings/google_shopping_language';
+    const BADGE_POSITION_CONFIG_CONFIG_PATH = 'space48_customer_reviews/badge_settings/badge_position';
+    const ENABLE_CONFIG_PATH = 'space48_customer_reviews/general/enable';
 
     /**
      * @var ScopeConfigInterface

@@ -2,7 +2,7 @@
 
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
     <default>
-        <space48_certified_shops>
+        <space48_customer_reviews>
             <general>
                 <enable>1</enable>
                 <trusted_store_id>474979</trusted_store_id>
@@ -21,6 +21,6 @@
             <debug_settings>
                 <enable_test>0</enable_test>
             </debug_settings>
-        </space48_certified_shops>
+        </space48_customer_reviews>
     </default>
 </config>

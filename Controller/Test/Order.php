@@ -20,9 +20,9 @@ use Magento\Store\Model\ScopeInterface;
 
 class Order extends Action
 {
-    const ENABLE_CONFIG_PATH = 'space48_certified_shops/general/enable';
+    const ENABLE_CONFIG_PATH = 'space48_customer_reviews/general/enable';
 
-    const ENABLE_TEST_CONFIG_PATH = 'space48_certified_shops/debug_settings/enable_test';
+    const ENABLE_TEST_CONFIG_PATH = 'space48_customer_reviews/debug_settings/enable_test';
 
     /**
      * @var ResultFactory

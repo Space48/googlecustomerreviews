@@ -18,8 +18,8 @@ use Magento\Store\Model\ScopeInterface;
 class Estimate
 {
 
-    const ESTIMATED_SHIPPING_CONFIG_PATH = 'space48_certified_shops/other_settings/default_estimated_shipping';
-    const ESTIMATED_DELIVERY_CONFIG_PATH = 'space48_certified_shops/other_settings/default_estimated_delivery';
+    const ESTIMATED_SHIPPING_CONFIG_PATH = 'space48_customer_reviews/other_settings/default_estimated_shipping';
+    const ESTIMATED_DELIVERY_CONFIG_PATH = 'space48_customer_reviews/other_settings/default_estimated_delivery';
 
     private $estimatedShippingDays;
     private $estimatedDeliveryDays;
@@ -78,7 +78,7 @@ class Estimate
         $this->estimatedShippingDays = $this->getConfig(self::ESTIMATED_SHIPPING_CONFIG_PATH);
         $this->estimatedDeliveryDays = $this->getConfig(self::ESTIMATED_DELIVERY_CONFIG_PATH);
 
-        $this->eventManager->dispatch('certified_shops_estimates_after', ['estimate' => $this]);
+        $this->eventManager->dispatch('customer_reviews_estimates_after', ['estimate' => $this]);
 
     }
 

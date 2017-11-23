@@ -22,8 +22,8 @@ class OrderTest extends AbstractController
     }
 
     /**
-     * @magentoConfigFixture current_store space48_certified_shops/general/enable 1
-     * @magentoConfigFixture current_store space48_certified_shops/debug_settings/enable_test 0
+     * @magentoConfigFixture current_store space48_customer_reviews/general/enable 1
+     * @magentoConfigFixture current_store space48_customer_reviews/debug_settings/enable_test 0
      */
     public function testDebugModeIsNotEnable()
     {
@@ -33,8 +33,8 @@ class OrderTest extends AbstractController
     }
 
     /**
-     * @magentoConfigFixture current_store space48_certified_shops/general/enable 1
-     * @magentoConfigFixture current_store space48_certified_shops/debug_settings/enable_test 1
+     * @magentoConfigFixture current_store space48_customer_reviews/general/enable 1
+     * @magentoConfigFixture current_store space48_customer_reviews/debug_settings/enable_test 1
      */
     public function testOrderIncrementIdIsNotProvided()
     {
@@ -43,8 +43,8 @@ class OrderTest extends AbstractController
     }
 
     /**
-     * @magentoConfigFixture current_store space48_certified_shops/general/enable 1
-     * @magentoConfigFixture current_store space48_certified_shops/debug_settings/enable_test 1
+     * @magentoConfigFixture current_store space48_customer_reviews/general/enable 1
+     * @magentoConfigFixture current_store space48_customer_reviews/debug_settings/enable_test 1
      */
     public function testOrderIncrementIdIsNotFound()
     {
@@ -53,8 +53,8 @@ class OrderTest extends AbstractController
     }
 
     /**
-     * @magentoConfigFixture current_store space48_certified_shops/general/enable 1
-     * @magentoConfigFixture current_store space48_certified_shops/debug_settings/enable_test 1
+     * @magentoConfigFixture current_store space48_customer_reviews/general/enable 1
+     * @magentoConfigFixture current_store space48_customer_reviews/debug_settings/enable_test 1
      * @magentoDataFixture   Magento/Sales/_files/order.php
      */
     public function testSampleOrderReturnsBadge()
