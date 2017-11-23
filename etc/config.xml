@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <space48_certified_shops>
+            <general>
+                <enable>1</enable>
+                <trusted_store_id>474979</trusted_store_id>
+                <locale>en_GB</locale>
+            </general>
+            <badge_settings>
+                <google_shopping_account_id></google_shopping_account_id>
+                <google_shopping_country>GB</google_shopping_country>
+                <google_shopping_language>en</google_shopping_language>
+                <badge_position></badge_position>
+            </badge_settings>
+            <other_settings>
+                <default_estimated_shipping>0</default_estimated_shipping>
+                <default_estimated_delivery>2</default_estimated_delivery>
+            </other_settings>
+            <debug_settings>
+                <enable_test>0</enable_test>
+            </debug_settings>
+        </space48_certified_shops>
+    </default>
+</config>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+/**
+ * system
+ *
+ * @copyright Copyright © 2017 Space48. All rights reserved.
+ * @author    raul@space48.com
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="space48" translate="label" sortOrder="105">
+            <label>Space48</label>
+        </tab>
+        <section id="space48_certified_shops" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>Google Customer Reviews</label>
+            <tab>space48</tab>
+            <resource>Space48_CustomerReviews::config</resource>
+            <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>General Configuration</label>
+                <field id="enable" type="select" sortOrder="10" translate="label" showInDefault="1" showInStore="1" showInWebsite="1">
+                    <label>Enabled</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment><![CDATA[Enable or disable this module.]]></comment>
+                </field>
+                <field id="trusted_store_id" type="text" sortOrder="20" translate="label" showInDefault="1" showInStore="1" showInWebsite="1">
+                    <label>Trusted Store ID</label>
+                    <comment><![CDATA[]]></comment>
+                    <depends>
+                        <field id="enable">1</field>
+                    </depends>
+                    <validate>required-entry</validate>
+                </field>
+                <field id="locale" type="select" sortOrder="40" translate="label" showInDefault="1" showInStore="1" showInWebsite="1">
+                    <label>Shop Locale</label>
+                    <source_model>Magento\Config\Model\Config\Source\Locale</source_model>
+                    <comment><![CDATA[]]></comment>
+                    <depends>
+                        <field id="enable">1</field>
+                    </depends>
+                    <validate>required-entry</validate>
+                </field>
+            </group>
+            <group id="badge_settings" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>Badge Settings</label>
+                <field id="google_shopping_account_id" type="text" sortOrder="10" translate="label" showInDefault="1" showInStore="1" showInWebsite="1">
+                    <label>Google Shopping Account ID</label>
+                    <comment><![CDATA[]]></comment>
+                    <depends>
+                        <field id="enable">1</field>
+                    </depends>
+                </field>
+                <field id="google_shopping_country" type="select" sortOrder="20" translate="label" showInDefault="1" showInStore="1" showInWebsite="1">
+                    <label>Google Shopping Country</label>
+                    <source_model>Magento\Directory\Model\Config\Source\Country</source_model>
+                    <comment><![CDATA[]]></comment>
+                    <depends>
+                        <field id="enable">1</field>
+                    </depends>
+                </field>
+                <field id="google_shopping_language" type="select" sortOrder="30" translate="label" showInDefault="1" showInStore="1" showInWebsite="1">
+                    <label>Google Shopping Language</label>
+                    <source_model>Space48\CustomerReviews\Model\Config\Source\Language</source_model>
+                    <comment><![CDATA[]]></comment>
+                    <depends>
+                        <field id="enable">1</field>
+                    </depends>
+                </field>
+                <field id="badge_position" type="select" sortOrder="40" translate="label" showInDefault="1" showInStore="1" showInWebsite="1">
+                    <label>Badge Position</label>
+                    <source_model>Space48\CustomerReviews\Model\Config\Source\BadgePosition</source_model>
+                    <comment><![CDATA[]]></comment>
+                    <depends>
+                        <field id="enable">1</field>
+                    </depends>
+                    <validate>required-entry</validate>
+                </field>
+            </group>
+            <group id="other_settings" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>Order Confirmation Page Settings</label>
+                <field id="default_estimated_shipping" type="text" sortOrder="10" translate="label" showInDefault="1" showInStore="1" showInWebsite="1">
+                    <label>Default Estimated Shipping Days</label>
+                    <comment><![CDATA[By default, how many days does it take to dispatch the item following an order]]></comment>
+                    <depends>
+                        <field id="enable">1</field>
+                    </depends>
+                    <validate>required-entry validate-zero-or-greater</validate>
+                </field>
+                <field id="default_estimated_delivery" type="text" sortOrder="20" translate="label" showInDefault="1" showInStore="1" showInWebsite="1">
+                    <label>Default Estimated Delivery Days</label>
+                    <comment><![CDATA[By default, how many days does it take to deliver the item following an order]]></comment>
+                    <depends>
+                        <field id="enable">1</field>
+                    </depends>
+                    <validate>required-entry validate-zero-or-greater</validate>
+                </field>
+            </group>
+            <group id="debug_settings" translate="label" type="text" sortOrder="40" showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>Debug Settings</label>
+                <field id="enable_test" type="select" sortOrder="10" translate="label" showInDefault="1" showInStore="1" showInWebsite="1">
+                    <label>Enable Testing URL</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment><![CDATA[Go to <strong>http://www.yourdomain.com/customerreviews/test/order/id/<span style="color:red">{{order Increment ID here}}</span></strong> to test the success tracking code.]]></comment>
+                    <depends>
+                        <field id="enable">1</field>
+                    </depends>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

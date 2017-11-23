@@ -1,0 +1,20 @@
+{
+    "name": "space48/customerreviews",
+    "description": "Google Customer Reviews (Google Certified Shops) for Magento2",
+    "type": "magento2-module",
+    "license": [
+        "proprietary"
+    ],
+    "require": {
+        "php": "~7.0|~7.1",
+            "magento/framework": "100.0.*|100.1.*"
+        },
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Space48\\CustomerReviews\\": ""
+        }
+    }
+}

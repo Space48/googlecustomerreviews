@@ -1,0 +1,38 @@
+<?php
+/**
+ * badge.phtml
+ *
+ * @Date        10/2017
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ * @author      @diazwatson
+ * @this \Space48\CustomerReviews\Block\Badge
+ */
+
+/** @var \Space48\CustomerReviews\Block\Badge $block */
+?>
+<script type="text/javascript">
+    var gts = gts || [];
+    gts.push(["id", "<?php echo $block->getTrustedId() ?>"]);
+    gts.push(["badge_position", "<?php echo $block->getBadgePosition() ?>"]);
+    <?php if($block->getBadgePosition() === 'USER_DEFINED') : ?>
+    gts.push(["badge_container", "<?php echo 'GTS_CONTAINER'; ?>"]);
+    <?php endif ?>
+    gts.push(["locale", "<?php echo $block->getLocale(); ?>"]);
+    <?php if ($block->isGoogleOfferItemPage()) : ?>
+    gts.push(["google_base_offer_id", "<?php echo $block->getGoogleBaseOfferId() ?>"]);
+    gts.push(["google_base_subaccount_id", "<?php echo $block->getGoogleShoppingAccountId() ?>"]);
+    gts.push(["google_base_country", "<?php echo $block->getGoogleShoppingCountry() ?>"]);
+    gts.push(["google_base_language", "<?php echo $block->getGoogleShoppingLanguage() ?>"]);
+    <?php endif; ?>
+    (function () {
+        var gts = document.createElement("script");
+        gts.type = "text/javascript";
+        gts.async = true;
+        gts.src = "https://www.googlecommerce.com/trustedstores/api/js";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(gts, s);
+    })();
+</script>
+<?php if ($block->getBadgePosition() === 'USER_DEFINED') : ?>
+    <div id="GTS_CONTAINER"></div>
+<?php endif ?>
